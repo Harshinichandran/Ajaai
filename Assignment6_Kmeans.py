@@ -1,6 +1,6 @@
 import csv
 import pylab
-import pandas as pd
+# import pandas as pd
 import numpy as np
 import uuid
 import sqlite3 as sql
@@ -15,11 +15,11 @@ import sqlite3 as sqll
 
 app = Flask(__name__,template_folder="static")
 conn = sql.connect('Assign2.db')
-df = pd.read_csv("edata.csv")
-df[['date', 'time']] = df['time'].str.split('T', expand=True)
-df['time'] = df['time'].str.split('.').str[0]
-df.to_sql('EarthQuake1', conn, if_exists='replace', index=False)
-print(df)
+# # df = pd.read_csv("edata.csv")
+# df[['date', 'time']] = df['time'].str.split('T', expand=True)
+# df['time'] = df['time'].str.split('.').str[0]
+# df.to_sql('EarthQuake1', conn, if_exists='replace', index=False)
+# print(df)
 ##############################################################################################################################
 
 @app.route('/')
